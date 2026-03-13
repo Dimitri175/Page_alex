@@ -1,0 +1,208 @@
+---
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Licencias de software premium, originales y con soporte 24/7. Entrega inmediata garantizada." />
+  <title>LicensePro | Licencias de Software Premium</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="logo">License<span>Pro</span></div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#caracteristicas">Características</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <button class="cta-btn">Acceder</button>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <h1>Licencias de Software <span>Premium</span></h1>
+        <p>Activa tu potencial. Ofrecemos licencias originales, seguras y con soporte 24/7 para que lleves tus proyectos al siguiente nivel.</p>
+        <div class="hero-buttons">
+          <a href="#precios" class="btn-primary">Ver Catálogo</a>
+          <a href="#caracteristicas" class="btn-secondary">Saber más</a>
+        </div>
+      </div>
+      <div class="hero-glow"></div>
+    </section>
+
+    <!-- Features -->
+    <section id="caracteristicas" class="features">
+      <h2>¿Por qué elegirnos?</h2>
+      <div class="features-grid">
+        <div class="feature-card animate">
+          <div class="icon">🚀</div>
+          <h3>Entrega Inmediata</h3>
+          <p>Recibe tu clave de producto al instante en tu correo electrónico tras la compra.</p>
+        </div>
+        <div class="feature-card animate">
+          <div class="icon">🔒</div>
+          <h3>100% Originales</h3>
+          <p>Licencias genuinas garantizadas, actualizables y seguras para tu tranquilidad.</p>
+        </div>
+        <div class="feature-card animate">
+          <div class="icon">🎧</div>
+          <h3>Soporte 24/7</h3>
+          <p>Nuestro equipo de expertos está siempre disponible para ayudarte en la activación.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="precios" class="pricing">
+      <h2>Nuestras Licencias</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card animate">
+          <h3>Básico</h3>
+          <p class="price">$19<span>/licencia</span></p>
+          <ul class="pricing-features">
+            <li>✔️ Activación para 1 PC</li>
+            <li>✔️ Soporte por correo</li>
+            <li>✔️ Actualizaciones menores</li>
+            <li>❌ Acceso a versiones beta</li>
+          </ul>
+          <button class="btn-buy" id="buy-basic">Comprar Ahora</button>
+        </div>
+
+        <div class="pricing-card popular animate">
+          <div class="badge">Más Popular</div>
+          <h3>Profesional</h3>
+          <p class="price">$49<span>/licencia</span></p>
+          <ul class="pricing-features">
+            <li>✔️ Activación para 3 PCs</li>
+            <li>✔️ Soporte prioritario 24/7</li>
+            <li>✔️ Todas las actualizaciones</li>
+            <li>✔️ Acceso a versiones beta</li>
+          </ul>
+          <button class="btn-buy" id="buy-pro">Comprar Ahora</button>
+        </div>
+
+        <div class="pricing-card animate">
+          <h3>Empresarial</h3>
+          <p class="price">$99<span>/licencia</span></p>
+          <ul class="pricing-features">
+            <li>✔️ Activaciones ilimitadas</li>
+            <li>✔️ Administrador de cuentas</li>
+            <li>✔️ Soporte telefónico directo</li>
+            <li>✔️ API de integración</li>
+          </ul>
+          <button class="btn-buy" id="buy-enterprise">Comprar Ahora</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contacto" class="contact">
+      <h2>Contáctanos</h2>
+      <p class="subtitle">¿Tienes dudas? Escríbenos y te respondemos en minutos.</p>
+      <form class="contact-form" id="contact-form">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" placeholder="Tu nombre completo" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required />
+        </div>
+        <div class="form-group">
+          <label for="plan">Plan de interés</label>
+          <select id="plan" name="plan">
+            <option value="">Selecciona un plan</option>
+            <option value="basico">Básico - $19</option>
+            <option value="profesional">Profesional - $49</option>
+            <option value="empresarial">Empresarial - $99</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" placeholder="¿En qué podemos ayudarte?"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Enviar Mensaje 🚀</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="logo">License<span>Pro</span></div>
+      <p>&copy; 2026 LicensePro. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar!.style.background = 'rgba(5, 5, 5, 0.97)';
+        navbar!.style.boxShadow = '0 4px 30px rgba(0,0,0,0.5)';
+      } else {
+        navbar!.style.background = 'rgba(5, 5, 5, 0.8)';
+        navbar!.style.boxShadow = 'none';
+      }
+    });
+
+    // Scroll-in animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, i * 100);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector((anchor as HTMLAnchorElement).getAttribute('href')!);
+        target?.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Buy buttons → scroll to contact
+    document.querySelectorAll('.btn-buy').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Form submit
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.btn-submit') as HTMLButtonElement;
+      btn.textContent = '✅ ¡Mensaje enviado!';
+      btn.style.background = '#10b981';
+      setTimeout(() => {
+        btn.textContent = 'Enviar Mensaje 🚀';
+        btn.style.background = '';
+        form.reset();
+      }, 3000);
+    });
+  </script>
+
+</body>
+</html>
